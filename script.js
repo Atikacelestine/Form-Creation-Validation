@@ -41,9 +41,13 @@ document.addEventListener('DOMContentLoaded',function({
 
 
         //Display feedback or success message
+             feedbackDiv.style.display="block";
         if (isValid){
-            feedbackDiv.innerHTML='<span style="color:#28a745"> Registration successful !</span>';
+            feedbackDiv.style.color="#28a745"; 
+                feedbackDiv.textContent="Registration successful !";
+                  
         }else{
-            feedbackDiv.innerHTML='<span style="color:#dc3545">'+feedbackMessage+'</span>'
+        feedbackDiv.innerHTML= messages.join("<br>");
+                feedbackDiv.style.color="#dc3545";
         }
         });

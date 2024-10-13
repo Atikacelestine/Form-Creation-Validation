@@ -9,9 +9,10 @@ const apiUrl='https://jsonplaceholder.typicode.com/users'
         const users = await response.json();
 
         dataContainer.text.Content="";
-        const userList=dociment.createElement('ul');
+        const userList=document.createElement('ul');
         users.forEach(user=>{
             const listItem =document.createElement('li');
+            listItems.push(listItem);
             listItem.textContent= user.name;
             userList.appenChild(listItem);
         });

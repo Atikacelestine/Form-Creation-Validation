@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded',function({
 
         //Username validation (e.g., must be atleast 3 characters
         if(username.length <3){
+                errors.push('Username must be at least 3 characters long');
             isValid = false;
-            feedbackMessage += 'Username must be atleast 3 characters long <br>';
+            feedbackMessage += 'Username must be at least 3 characters long <br>';
         }
 
         //Email validation (basic pattern check)
